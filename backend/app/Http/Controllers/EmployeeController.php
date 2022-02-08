@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Employee;
 
+use Carbon\Carbon;
+
 class EmployeeController extends Controller{
 
 
@@ -20,14 +22,29 @@ class EmployeeController extends Controller{
 
         $dataEmployee= new Employee;
 
-        $dataEmployee->name=$request->name;
-        $dataEmployee->surname=$request->surname;
-        $dataEmployee->telephone=$request->telephone;
-        $dataEmployee->image=$request->image;
+        if($request->hasFile('image')){
 
-        $dataEmployee->save();
+            $OriginalName=$request->file('image')->getClientOriginalName();
 
-        return response()->json($request);
+            $newName=Carbon::now()->timestamp."_".$OriginalName;
+
+            $Destiny='./upload/';
+
+            $request->file('image')->move($Destiny, $newName);
+
+            
+            $dataEmployee->name=$request->name;
+            $dataEmployee->surname=$request->surname;
+            $dataEmployee->telephone=$request->telephone;
+            $dataEmployee->image=ltrim($Destiny,'.').$newName;
+
+            $dataEmployee->save();
+        }
+        
+        $request->file('image');
+
+
+        return response()->json($newName);
     }
 
 }

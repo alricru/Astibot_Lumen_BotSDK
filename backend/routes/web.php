@@ -18,6 +18,9 @@ $router->get('/', function () use ($router) {
 });
 
 // Creates a route that gets the function from the controller using the table employees
-$router->get('/employees','EmployeeController@index');
+$router->get('/employees','EmployeeController@findAll');
+$router->get('/employees/{id}','EmployeeController@findById');
 $router->post('/employees','EmployeeController@addEmployee');
+$router->delete('/employees/{id}','EmployeeController@deleteById');
+$router->post('/employees/{id}','EmployeeController@updateById');
 

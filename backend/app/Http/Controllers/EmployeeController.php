@@ -67,7 +67,6 @@ class EmployeeController extends Controller{
 
         // If the File is changed...
         if($request->hasFile('image')){
-
             // If the Image already exists in the folder /upload, erases it
             if($employee){
                 $fileRoute=base_path('public').$employee->image;
@@ -82,7 +81,6 @@ class EmployeeController extends Controller{
             $newName=Carbon::now()->timestamp."_".$OriginalName;
             $Destiny='./upload/';
             $request->file('image')->move($Destiny, $newName);
-            
             $employee->image=ltrim($Destiny,'.').$newName;
         }
 

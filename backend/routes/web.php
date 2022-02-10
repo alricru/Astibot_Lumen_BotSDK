@@ -17,10 +17,24 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-// Creates a route that gets the function from the controller using the table employees
+// Routes to functions from EmployeeController
 $router->get('/employees','EmployeeController@findAll');
 $router->get('/employees/{id}','EmployeeController@findById');
 $router->post('/employees','EmployeeController@addEmployee');
 $router->delete('/employees/{id}','EmployeeController@deleteById');
 $router->post('/employees/{id}','EmployeeController@updateById');
+
+// Routes to functions from EmployeeController
+$router->get('/ships','ShipController@findAll');
+$router->get('/ships/{id}','ShipController@findById');
+$router->post('/ships','ShipController@addShip');
+$router->delete('/ships/{id}','ShipController@deleteById');
+$router->put('/ships/{id}','ShipController@updateById');
+
+// Creates a route that gets the function from the controller using the table maintenances
+$router->get('/maintenances','MaintenanceController@findAll');
+$router->get('/maintenances/{id}','MaintenanceController@findById');
+$router->post('/maintenances','MaintenanceController@addMaintenance');
+$router->delete('/maintenances/{id}','MaintenanceController@deleteById');
+$router->put('/maintenances/{id}','MaintenanceController@updateById');
 

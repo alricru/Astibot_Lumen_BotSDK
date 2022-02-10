@@ -17,6 +17,9 @@ class Employees extends Migration
             $table->id();
             $table->string('name',250);
             $table->string('surname',250);
+            $table->string('email',250);
+            $table->string('job',250);
+            $table->string('department',250);
             $table->integer('telephone');
             $table->string('image',2500);
             $table->timestamps();

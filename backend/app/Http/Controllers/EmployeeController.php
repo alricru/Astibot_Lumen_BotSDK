@@ -32,6 +32,10 @@ class EmployeeController extends Controller{
             
             $dataEmployee->name=$request->name;
             $dataEmployee->surname=$request->surname;
+            $dataEmployee->email=$request->email;
+            $dataEmployee->job=$request->job;
+            $dataEmployee->department=$request->department;
+            
             $dataEmployee->telephone=$request->telephone;
             $dataEmployee->image=ltrim($Destiny,'.').$newName;
 
@@ -91,6 +95,15 @@ class EmployeeController extends Controller{
         if($request->input('surname')){
             $employee->surname=$request->input('surname');
         }
+        if($request->input('email')){
+            $employee->email=$request->input('email');
+        }
+        if($request->input('job')){
+            $employee->job=$request->input('job');
+        }
+        if($request->input('department')){
+            $employee->department=$request->input('department');
+        }
         if($request->input('telephone')){
             $employee->telephone=$request->input('telephone');
         }
@@ -98,5 +111,4 @@ class EmployeeController extends Controller{
         $employee->save();
         return response()->json("Datos del Empleado actualizados");
     }
-
 }

@@ -19,6 +19,7 @@ class Ships extends Migration
             $table->string('model',250);
             $table->string('client',250);
             $table->string('description',250);
+            $table->string('image',2500);
             $table->timestamps();
         });
     }

@@ -11,26 +11,38 @@ class ShipController extends Controller{
 
     // Allows to access the Model
     public function findAll(){
-        // dataShip is created as a variable that contains all information about Employee Model
+        // dataShip is created as a variable that contains all information about ship Model
         $dataShip= Ship::all();
-        // Returns a json with all data contained in $dataEmployee
+        // Returns a json with all data contained in $dataShip
         return response()->json($dataShip);
     }
 
-    // Save employee in the database with a request 
+    // Save Ship in the database with a request 
     public function addShip(Request $request){
         $dataShip= new Ship;
   
-        $dataShip->brand=$request->brand;
-        $dataShip->model=$request->model;
-        $dataShip->client=$request->client;
-        $dataShip->description=$request->description;
+        if($request->hasFile('image')){
 
-        $dataShip->save();
-        return response()->json('Nave añadida con éxito');
+            // Get the Image from the request, then save the name in the DB and the Image in upload/
+            $OriginalName=$request->file('image')->getClientOriginalName();
+            $newName=Carbon::now()->timestamp."_".$OriginalName;
+            $Destiny='./upload/';
+            $request->file('image')->move($Destiny, $newName);
+            
+            $dataShip->brand=$request->brand;
+            $dataShip->model=$request->model;
+            $dataShip->client=$request->client;
+            $dataShip->description=$request->description;
+            
+            $dataShip->image=ltrim($Destiny,'.').$newName;
+
+            $dataShip->save();
+        }
+        $request->file('image');
+        return response()->json($dataShip);
     }
 
-    //Search an Employee using the ID
+    //Search an ship using the ID
     public function findById($id){
         $ship= new Ship;
         $dataShip=$ship->find($id);
@@ -40,7 +52,7 @@ class ShipController extends Controller{
     //Erases a registry using the ID
     public function deleteById($id){
         $ship= Ship::find($id);
-        if(!$employee){
+        if(!$ship){
             return response()->json("Error - No existe dicha nave");
         }
         $ship->delete();
@@ -48,23 +60,42 @@ class ShipController extends Controller{
     }
 
     public function updateById(Request $request,$id){
-        $ship= Ship::find($id);
+        $ship= ship::find($id);
+
+        // If the File is changed...
+        if($request->hasFile('image')){
+            // If the Image already exists in the folder /upload, erases it
+            if($ship){
+                $fileRoute=base_path('public').$ship->image;
+                if(file_exists($fileRoute)){
+                    unlink($fileRoute);
+                }
+                $ship->delete();
+            }
+
+            // Get the Image from the request to change it if neccesary
+            $OriginalName=$request->file('image')->getClientOriginalName();
+            $newName=Carbon::now()->timestamp."_".$OriginalName;
+            $Destiny='./upload/';
+            $request->file('image')->move($Destiny, $newName);
+            $ship->image=ltrim($Destiny,'.').$newName;
+        }
 
         // If the main data is changed...
         if($request->input('brand')){
-            $employee->brand=$request->input('brand');
+            $ship->brand=$request->input('brand');
         }
         if($request->input('model')){
-            $employee->model=$request->input('model');
+            $ship->model=$request->input('model');
         }
         if($request->input('client')){
-            $employee->client=$request->input('client');
+            $ship->client=$request->input('client');
         }
         if($request->input('description')){
-            $employee->description=$request->input('description');
+            $ship->description=$request->input('description');
         }
 
         $ship->save();
-        return response()->json("Datos de la Nave actualizados");
+        return response()->json("Datos del Empleado actualizados");
     }
 }

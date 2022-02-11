@@ -50,29 +50,29 @@ class MaintenanceController extends Controller{
     }
 
     public function updateById(Request $request,$id){
-        $ship= Ship::find($id);
+        $maintenance= Maintenance::find($id);
 
         // If the main data is changed...
         if($request->input('service')){
-            $employee->service=$request->input('service');
+            $maintenance->service=$request->input('service');
         }
         if($request->input('description')){
-            $employee->description=$request->input('description');
+            $maintenance->description=$request->input('description');
         }
         if($request->input('status')){
-            $employee->status=$request->input('status');
+            $maintenance->status=$request->input('status');
         }
         if($request->input('shipyard')){
-            $employee->shipyard=$request->input('shipyard');
+            $maintenance->shipyard=$request->input('shipyard');
         }
         if($request->input('employeeId')){
-            $employee->employeeId=$request->input('employeeId');
+            $maintenance->employeeId=$request->input('employeeId');
         }
         if($request->input('shipId')){
-            $employee->shipId=$request->input('shipId');
+            $maintenance->shipId=$request->input('shipId');
         }
 
-        $ship->save();
+        $maintenance->save();
         return response()->json("Datos de la Nave actualizados");
     }
 }

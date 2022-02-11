@@ -29,7 +29,7 @@ $router->get('/ships','ShipController@findAll');
 $router->get('/ships/{id}','ShipController@findById');
 $router->post('/ships','ShipController@addShip');
 $router->delete('/ships/{id}','ShipController@deleteById');
-$router->put('/ships/{id}','ShipController@updateById');
+$router->post('/ships/{id}','ShipController@updateById');
 
 // Creates a route that gets the function from the controller using the table maintenances
 $router->get('/maintenances','MaintenanceController@findAll');

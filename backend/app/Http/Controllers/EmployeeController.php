@@ -42,7 +42,7 @@ class EmployeeController extends Controller{
             $dataEmployee->save();
         }
         $request->file('image');
-        return response()->json($newName);
+        return response()->json($dataEmployee);
     }
 
     //Search an Employee using the ID

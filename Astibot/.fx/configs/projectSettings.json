@@ -1,0 +1,23 @@
+{
+    "appName": "Astibot",
+    "projectId": "27e2793c-afe0-48a8-9abe-893e2ee27fe8",
+    "solutionSettings": {
+        "name": "fx-solution-azure",
+        "version": "1.0.0",
+        "hostType": "Azure",
+        "azureResources": [],
+        "capabilities": [
+            "Bot"
+        ],
+        "activeResourcePlugins": [
+            "fx-resource-identity",
+            "fx-resource-bot",
+            "fx-resource-aad-app-for-teams",
+            "fx-resource-local-debug",
+            "fx-resource-appstudio"
+        ]
+    },
+    "version": "2.1.0",
+    "isFromSample": false,
+    "programmingLanguage": "javascript"
+}

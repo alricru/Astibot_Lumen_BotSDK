@@ -36,3 +36,19 @@ In visual studio we need to install the **Composer** package using the command *
 ![image](https://user-images.githubusercontent.com/91074521/156417177-6b259e38-240f-4750-b456-2522fec5e0a3.png)
 
 # Models
+- Data Model:
+
+![image](https://user-images.githubusercontent.com/91074521/156423274-0b51aa1f-eb65-4be3-b1a5-6d18893b0a1b.png)
+
+- Relationship Model:
+
+![image](https://user-images.githubusercontent.com/91074521/156423488-2f535275-6445-4879-882d-9c00f4540d43.png)
+
+# Postman
+ - https://documenter.getpostman.com/view/17625230/UVeMJPon
+
+# References
+ - Api Restfull with Lumen: https://www.youtube.com/watch?v=VmtOP5sEH68
+ - Api Restfull with Lumen 2: https://www.youtube.com/watch?v=IJSrPKlJixA
+
+

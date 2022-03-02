@@ -1,4 +1,4 @@
-         ![image](https://user-images.githubusercontent.com/91074603/156426043-7440e4c2-66a6-4230-af2b-ff166bf8d118.png)
+![image](https://user-images.githubusercontent.com/91074603/156426043-7440e4c2-66a6-4230-af2b-ff166bf8d118.png)
 
 # Index
 
@@ -11,11 +11,11 @@
 - **Models**
 
 
-
 # Introduction
 
 - This is a project developed for ***Astican***. A conversational bot integrated on **Teams**, this will help employees from the company to track information of the shipyard with a simple question.
 - This project was made with **Lumen** for the backend and **Bot Framework SDK** for the Frontend.
+-
 
 # Requeriments
 
@@ -29,6 +29,7 @@ To use Astibot we´ll need:
 - **Visual Studio Code**: https://code.visualstudio.com/
 - **TeamsToolKit**: A plug-in you can install in Visual Studio Code
 - ![image](https://user-images.githubusercontent.com/91074603/156425801-2b1e9307-3a72-412d-af4c-1c005053e28e.png)
+
  
 # Connection with database
 
@@ -42,6 +43,24 @@ You need to open Xamp and import the database with the **db_astibot.sql** file o
 In visual studio we need to install the **Composer** package using the command ***npm install composer***, once you do that use the command ***Composer lumen*** to start the backend.
 
 ![image](https://user-images.githubusercontent.com/91074521/156417177-6b259e38-240f-4750-b456-2522fec5e0a3.png)
+
+# Start and connect to Astibot using Microsoft Teams
+
+Once we started our backend API, it is time to build Astibot.
+
+First, we need TeamsToolKit installed in Visual Studio Code. Clicking in the left-sided icon will ask us to open our Astibot folder.
+
+![image](https://user-images.githubusercontent.com/91074603/156426495-76d7f310-30c9-4ec0-a105-43e2e6eaa38a.png)
+![image](https://user-images.githubusercontent.com/91074603/156426512-b35c44fe-c20d-49f1-9f4e-e018414a1b19.png)
+
+Now we can easily debug our Astibot pressing the F5 key. It will start compiling and building Astibot.
+
+![image](https://user-images.githubusercontent.com/91074603/156426768-b307afed-02c5-4fe7-a0a5-5956cbdd82c4.png)
+
+We will be redirected to Log-In using a Microsoft account into Microsoft Teams, so Astibot will be attached. We will see a view to add Astibot to our tools in Micirosft Teams.
+
+![image](https://user-images.githubusercontent.com/91074603/156427158-76162306-c59f-4ae2-8c55-02180f84eaf9.png)
+
 
 # Models
 - Data Model:

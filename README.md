@@ -15,7 +15,6 @@
 
 - This is a project developed for ***Astican***. A conversational bot integrated on **Teams**, this will help employees from the company to track information of the shipyard with a simple question.
 - This project was made with **Lumen** for the backend and **Bot Framework SDK** for the Frontend.
--
 
 # Requeriments
 

@@ -1,0 +1,26 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+      {
+        "type": "TextBlock",
+        "size": "Medium",
+        "weight": "Bolder",
+        "text": "Acceso a la lista de empleados"
+      },
+      {
+        "type": "TextBlock",
+        "text": "Presione para acceder al servidor de Empleados",
+        "wrap": true
+      }
+    ],
+    "actions": [
+      {
+        "type": "Action.OpenUrl",
+        "title": "Acceso a los Empleados",
+        "url": "http://localhost:8089/employees"
+      }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.4"
+  }
+  

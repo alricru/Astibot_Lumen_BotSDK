@@ -38,7 +38,7 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "lumen":[
-            "php -S localhost:8089 -t public"
+            "php -S 0.0.0.0:8089 -t public"
         ]
     }
     

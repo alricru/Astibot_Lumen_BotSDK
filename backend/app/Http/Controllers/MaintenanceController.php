@@ -11,9 +11,9 @@ class MaintenanceController extends Controller{
 
     // Allows to access the Model
     public function findAll(){
-        // dataMaintenance is created as a variable that contains all information about Employee Model
+        // dataMaintenance is created as a variable that contains all information about Maintenance Model
         $dataMaintenance= Maintenance::all();
-        // Returns a json with all data contained in $dataEmployee
+        // Returns a json with all data contained in $dataMaintenance
         return response()->json($dataMaintenance);
     }
 

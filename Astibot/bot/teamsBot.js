@@ -3,6 +3,11 @@ const querystring = require("querystring");
 const { TeamsActivityHandler, CardFactory, TurnContext} = require("botbuilder");
 const rawWelcomeCard = require("./adaptiveCards/welcome.json");
 const rawLearnCard = require("./adaptiveCards/learn.json");
+const rawHelpCard = require("./adaptiveCards/help.json");
+const rawEmployeesCard = require("./adaptiveCards/employees.json");
+const rawShipsCard = require("./adaptiveCards/ships.json");
+const rawMaintenancesCard = require("./adaptiveCards/maintenances.json");
+
 const cardTools = require("@microsoft/adaptivecards-tools");
 
 class TeamsBot extends TeamsActivityHandler {
@@ -26,8 +31,10 @@ class TeamsBot extends TeamsActivityHandler {
       // Trigger command by IM text
       switch (txt) {
         case "welcome": {
+          console.log("BIENVENIDOSOSSSSSSSS");
           const card = cardTools.AdaptiveCards.declareWithoutData(rawWelcomeCard).render();
           await context.sendActivity({ attachments: [CardFactory.adaptiveCard(card)] });
+          console.log("ADIOOOOOOOSSSSSSSSSSS");
           break;
         }
         case "learn": {
@@ -36,6 +43,40 @@ class TeamsBot extends TeamsActivityHandler {
           await context.sendActivity({ attachments: [CardFactory.adaptiveCard(card)] });
           break;
         }
+        case "Help": {
+          const card = cardTools.AdaptiveCards.declare(rawHelpCard).render(this.likeCountObj);
+          await context.sendActivity({ attachments: [CardFactory.adaptiveCard(card)] });
+          break;
+        }
+        case "AllEmployees": {
+          const card = cardTools.AdaptiveCards.declare(rawEmployeesCard).render(this.likeCountObj);
+          await context.sendActivity({ attachments: [CardFactory.adaptiveCard(card)] });
+          break;
+        }
+        case "AllShips": {
+          const card = cardTools.AdaptiveCards.declare(rawShipsCard).render(this.likeCountObj);
+          await context.sendActivity({ attachments: [CardFactory.adaptiveCard(card)] });
+          break;
+        }
+        case "AllMaintenances": {
+          const card = cardTools.AdaptiveCards.declare(rawMaintenancesCard).render(this.likeCountObj);
+          await context.sendActivity({ attachments: [CardFactory.adaptiveCard(card)] });
+          break;
+        }
+
+        // case "employees": {
+        //   console.log("ENVIANDO MENSAJKEEEEEEEE");
+        //   const response = await axios.get(
+        //     `http://localhost:8089/employees`
+        //   );
+        //   console.log("llamaditaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        //   console.log(response);
+        //   await context.sendActivity(response.name);
+        //   break;
+        // }
+
+
+        
         /**
          * case "yourCommand": {
          *   await context.sendActivity(`Add your response here!`);

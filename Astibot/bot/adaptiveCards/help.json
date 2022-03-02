@@ -1,0 +1,26 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+      {
+        "type": "TextBlock",
+        "size": "Medium",
+        "weight": "Bolder",
+        "text": "SERVICIO DE AYUDA ASTIBOT"
+      },
+      {
+        "type": "TextBlock",
+        "text": "Presione el botón para acceder al servidor de Ayuda de Astibot",
+        "wrap": true
+      }
+    ],
+    "actions": [
+      {
+        "type": "Action.OpenUrl",
+        "title": "Servidor de Ayuda",
+        "url": "http://localhost:8080/AstiBot-HelpDoc.html"
+      }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.4"
+  }
+  

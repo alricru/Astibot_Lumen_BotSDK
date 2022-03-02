@@ -61,6 +61,19 @@ We will be redirected to Log-In using a Microsoft account into Microsoft Teams, 
 
 ![image](https://user-images.githubusercontent.com/91074603/156427158-76162306-c59f-4ae2-8c55-02180f84eaf9.png)
 
+Now we can chat with Astibot. It will listen to some sort commands. Those commands shows descriptive cards that will redirect the usser to the backend entries and the HelpNDoc Server(It needs to be activated. There´s a HelpNDoc file in Astibot_Docs folder).
+
+![image](https://user-images.githubusercontent.com/91074603/156427938-f62ce2e4-e2a7-46dc-81ec-4f7bf33eccf1.png)
+
+We can use these comands:
+
+ - "welcome": Basic command from TeamsToolKit
+ - "employees": Shows a card that can redirect the user to backend/employees
+ - "ships": Shows a card that can redirect the user to backend/ships
+ - "maintenaces": Shows a card that can redirect the user to backend/maintenances
+ - "help": Shows a card that can redirect the user to the Help Server
+
+
 
 # Models
 - Data Model:

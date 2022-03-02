@@ -67,11 +67,11 @@ Now we can chat with Astibot. It will listen to some sort commands. Those comman
 
 We can use these comands:
 
- - "welcome": Basic command from TeamsToolKit
- - "employees": Shows a card that can redirect the user to backend/employees
- - "ships": Shows a card that can redirect the user to backend/ships
- - "maintenaces": Shows a card that can redirect the user to backend/maintenances
- - "help": Shows a card that can redirect the user to the Help Server
+    - "welcome": Basic command from TeamsToolKit
+    - "employees": Shows a card that can redirect the user to backend/employees
+    - "ships": Shows a card that can redirect the user to backend/ships
+    - "maintenaces": Shows a card that can redirect the user to backend/maintenances
+    - "help": Shows a card that can redirect the user to the Help Server
 
 
 

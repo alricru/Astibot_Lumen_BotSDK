@@ -22,6 +22,12 @@ To initiate the Backend we need:
 - **Xamp**: https://www.apachefriends.org/es/index.html
 - **Composer**: https://getcomposer.org/download/
 
+
+To use Astibot we´ll need: 
+- **Visual Studio Code**: https://code.visualstudio.com/
+- **TeamsToolKit**: A plug-in you can install in Visual Studio Code
+- ![image](https://user-images.githubusercontent.com/91074603/156425801-2b1e9307-3a72-412d-af4c-1c005053e28e.png)
+ 
 # Connection with database
 
 You need to open Xamp and import the database with the **db_astibot.sql** file on PHPMyAdmin or create an empty database named **db_astibot.sql** and migrate the tables with the command **php artisan migrate**
@@ -44,7 +50,7 @@ In visual studio we need to install the **Composer** package using the command *
 
 ![image](https://user-images.githubusercontent.com/91074521/156423488-2f535275-6445-4879-882d-9c00f4540d43.png)
 
-# Postman
+# Postman Publish
  - https://documenter.getpostman.com/view/17625230/UVeMJPon
 
 # References

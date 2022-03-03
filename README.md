@@ -78,6 +78,15 @@ We can use these comands:
 ![image](https://user-images.githubusercontent.com/91074603/156428475-99db2a1a-49cc-4d83-ad92-9dfb7687b6a9.png)
 ![image](https://user-images.githubusercontent.com/91074603/156428486-855f1811-f110-4d68-a565-c23e94133eb2.png)
 
+# Usability
+
+As we can see the interface created by TeamsToolKit is clearly and intuitive, making it easier for the user to chat with Astibot.
+
+Also the response cards are a usefull tool with a simple view, being obvius the use of every card. In case the user´s command doesn´t match, Astibolt will response with an error message.
+
+![image](https://user-images.githubusercontent.com/91074603/156602918-afb63595-dadc-4ddf-a52f-3d6f5f705eb6.png)
+
+
 # Models
 - Data Model:
 

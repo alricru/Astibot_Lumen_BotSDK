@@ -10,12 +10,28 @@
 
 ![image](https://user-images.githubusercontent.com/91074521/156604149-c14dfdb1-ea90-444e-8bb6-1e6fd596a2cd.png)
 
+# User Requisites
+The users form the company will use Astibot as an extension for Microsoft Teams to gather information from their database as employees, ships and maintenaces related. This information will be deployed using response cards that link the user with the database.
+
+
+R.1. - The platform for Astibot will be Microsoft Teams
+
+    R.1.1. - Employees will need a Microsoft Account delivered by the company
+    R.1.2. - Users have to add Astibot as a Microsoft Teams tool
+     
+R.2. - Users will chat with Astibot
+
+    R.2.1. - Astibot will response to certain commands
+    R.2.2. - Every command will deploy a response card
+    R.2.3. - Cards will link the user to the backend server
+    R.2.4. - There will be a commando for: Employees, Ships, Maintenances and a Help Center
+    R.2.5. - In case the User fails a command, Astibot will response with an error message
 
 # Requeriments
 
 To initiate the Backend we need: 
 - an **IDE** like **Visual Studio Code**: https://code.visualstudio.com/
-- **Xamp**: https://www.apachefriends.org/es/index.html
+- **Xampp**: https://www.apachefriends.org/es/index.html
 - **Composer**: https://getcomposer.org/download/
 
 

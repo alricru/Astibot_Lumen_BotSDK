@@ -1,20 +1,15 @@
 ![image](https://user-images.githubusercontent.com/91074603/156426043-7440e4c2-66a6-4230-af2b-ff166bf8d118.png)
 
-# Index
-
-- **Introduction**
-
-- **Requeriments**
-
-- **Connection with Database**
-
-- **Models**
-
 
 # Introduction
 
 - This is a project developed for ***Astican***. A conversational bot integrated on **Teams**, this will help employees from the company to track information of the shipyard with a simple question.
 - This project was made with **Lumen** for the backend and **Bot Framework SDK** for the Frontend.
+
+# Use Cases
+
+![image](https://user-images.githubusercontent.com/91074521/156604149-c14dfdb1-ea90-444e-8bb6-1e6fd596a2cd.png)
+
 
 # Requeriments
 
